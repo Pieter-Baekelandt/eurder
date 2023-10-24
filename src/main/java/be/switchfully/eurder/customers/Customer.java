@@ -8,10 +8,10 @@ public class Customer {
     private final String lastName;
     private final String emailAddress;
     private final String password;
-    private final Address address;
+    private final String address;
     private final String phoneNumber;
 
-    public Customer(String firstName, String lastName, String emailAddress, String password, Address address, String phoneNumber) {
+    public Customer(String firstName, String lastName, String emailAddress, String password, String address, String phoneNumber) {
         this.id = UUID.randomUUID().toString();
         this.firstName = firstName;
         this.lastName = lastName;
@@ -45,7 +45,7 @@ public class Customer {
         return password;
     }
 
-    public Address getAddress() {
+    public String getAddress() {
         return address;
     }
 

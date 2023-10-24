@@ -7,8 +7,10 @@ import java.util.Collection;
 @ApplicationScoped
 public class CustomerService {
     private final CustomerRepository customerRepository;
-    public CustomerService(CustomerRepository customerRepository) {
+    private final CustomerMapper customerMapper;
+    public CustomerService(CustomerRepository customerRepository, CustomerMapper customerMapper) {
         this.customerRepository = customerRepository;
+        this.customerMapper = customerMapper;
     }
 
     public void registerCustomer(Customer customer) throws IllegalArgumentException {
@@ -23,7 +25,7 @@ public class CustomerService {
         }
     }
 
-    public Collection<Customer> getAllCustomers() {
-            return customerRepository.getAllCustomers();
+    public Collection<CustomerDTO> getAllCustomers() {
+            return customerMapper.mapToDTO(customerRepository.getAllCustomers());
     }
 }

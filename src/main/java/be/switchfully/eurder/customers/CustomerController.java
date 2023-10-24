@@ -28,7 +28,7 @@ public class CustomerController {
 
     @GET
     @Path("/customers")
-    public Collection<Customer> getAllCustomers() {
+    public Collection<CustomerDTO> getAllCustomers() {
         return customerService.getAllCustomers();
     }
 }

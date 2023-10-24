@@ -5,7 +5,7 @@ public class CustomerDTO {
     private String firstName;
     private String lastName;
     private String emailAddress;
-    private Address address;
+    private String address;
     private String phoneNumber;
 
     public String getId() {
@@ -40,11 +40,11 @@ public class CustomerDTO {
         this.emailAddress = emailAddress;
     }
 
-    public Address getAddress() {
+    public String getAddress() {
         return address;
     }
 
-    public void setAddress(Address address) {
+    public void setAddress(String address) {
         this.address = address;
     }
 
