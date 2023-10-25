@@ -30,5 +30,8 @@ public class CustomerRepository {
     public Collection<Customer> getAllCustomers() {
         return customers.values();
     }
+
+    public Customer getCustomerById(String id) { return customers.get(id);
+    }
 }
 
